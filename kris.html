@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Candace!</title>
+    <style>
+      body {
+        background-color: #ff69b4;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        position: relative;
+      }
+
+      h1 {
+        color: #ffd700;
+        font-size: 3em;
+        margin-top: 50px;
+        text-shadow: 2px 2px #8b008b;
+      }
+
+      .birthday-message {
+        background-color: #f0e68c;
+        border-radius: 10px;
+        display: inline-block;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 2px 2px #8b008b;
+        position: absolute;
+        bottom: 20px;
+      }
+
+      .birthday-gif {
+        display: none;
+      }
+
+      .birthday-gif:target {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 1;
+      }
+
+      .gif-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 2px 2px #8b008b;
+      }
+
+      .gif-content img {
+        width: 80%;
+        height: auto;
+      }
+
+      .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #000;
+        cursor: pointer;
+      }
+
+      .heart {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ff69b4' d='M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 20px;
+        left: 20px;
+      }
+
+      .heart:nth-of-type(2) {
+        top: 20px;
+        right: 20px;
+      }
+
+      .heart:nth-of-type(3) {
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .heart:nth-of-type(4) {
+        bottom: 20px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Happy Birthday Candace!</h1>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="birthday-message">
+      Wishing you all the love, joy, and happiness on your special day!
+      <a href="birthday.gif" class="gif-button">Press here for something cool</a>
+    </div>
+
+    <div id="birthday-gif" class="birthday-gif">
+      <div class="gif-content">
+        <img src="your-gif-url-here.gif" alt="Birthday GIF">
+        <span class="close-button">&times;</span>
+      </div>
+    </div>
+  </body>
+</html>
